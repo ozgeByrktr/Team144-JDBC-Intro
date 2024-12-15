@@ -3,14 +3,19 @@ package HelperDB;
 import com.github.javafaker.Faker;
 import lombok.Getter;
 
+import java.sql.Array;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 
 @Getter
 public class CommonData {
-    Faker faker=new Faker();
+    public static Faker faker=new Faker();
     public static HashMap<String,String> patientsEmailGender;
+    public static int [] result ;
+    public static HashMap<Integer,Integer> date;
+    public static Integer ogleden_once;
+    public static Integer ogleden_sonra;
     //email_type, smtp_server, smtp_port, smtp_username, smtp_password, ssl_tls, smtp_auth, is_active, created_at
     //smtp.gmail.com  // 587/465
     private String email_type;
